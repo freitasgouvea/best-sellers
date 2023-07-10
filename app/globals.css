@@ -1,0 +1,63 @@
+body {
+  color: #24272A;
+  background-color: #FFFFFF;
+}
+
+[data-theme="dark"] body {
+  color: #FFFFFF;
+  background-color: #24272A;
+}
+
+button {
+  border-radius: 8px;
+  background-color: #141618;
+  color: #FFFFFF;
+  border: 1px solid #141618;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #141618;
+    color: #24272A;
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid #141618;
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover,
+  &[disabled]:hover {
+    background-color: #141618;
+    color: #FFFFFF;
+    border: 1px solid #141618;
+  }
+}
+
+[data-theme="dark"] button {
+  background-color: #FFFFFF;
+  color: #141618;
+  border: 1px solid #FFFFFF;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #24272A;
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid #FFFFFF;
+  }
+
+  &:disabled:hover,
+  &[disabled]:hover {
+    background-color: #FFFFFF;
+    color: #141618;
+    border: 1px solid #FFFFFF;
+  }
+}
