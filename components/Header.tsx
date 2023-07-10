@@ -1,7 +1,11 @@
+import { ToggleButton } from "./ToggleButton";
+
 export const Header = () => {
   return (
     <header>
-      <nav>Best Sellers</nav>
+      <nav>
+        <ToggleButton />
+      </nav>
     </header>
   );
 };
