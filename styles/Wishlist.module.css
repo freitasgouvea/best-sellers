@@ -1,0 +1,13 @@
+.wishlist {
+  grid-area: social;
+  display: none;
+  background-color: var(--wishlist-bg-color);
+  padding-left: 20px;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.wishlistTitle {
+  margin: 30px 0;
+}

@@ -1,0 +1,13 @@
+.sidebar {
+  background: var(--wishlist-bg-color);
+  grid-area: sidebar;
+}
+
+.sidebarItem {
+  line-height: 2;
+  cursor: pointer;
+}
+
+.sidebarHeader {
+  margin-bottom: 5px;
+}
