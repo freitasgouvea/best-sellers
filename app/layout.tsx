@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Sidebar />
             <main>
               <header className="main-header">
-                <h2>The NYT Best Sellers</h2>
+                <h1>Featured Books</h1>
               </header>
               <Navbar />
               {children}

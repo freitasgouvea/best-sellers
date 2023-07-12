@@ -15,7 +15,7 @@
   font-size: 13px;
   padding-bottom: 11px;
   color: var(--main-font-color);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .navbarLinkActive {
@@ -27,6 +27,7 @@
   padding-bottom: 11px;
   color: var(--main-link-active-color);
   border-bottom: 3px solid #FADA5E;
+  font-weight: 700;
 }
 
 .navbarLink:nth-of-type(4),

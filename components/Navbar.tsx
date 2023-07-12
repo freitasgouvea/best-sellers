@@ -42,7 +42,7 @@ export const Navbar = () => {
         href="#"
         onClick={() => handleLinkClick("young-adults")}
       >
-        Young Adults
+        Young
       </a>
       <a
         key="children"
@@ -50,7 +50,7 @@ export const Navbar = () => {
         href="#"
         onClick={() => handleLinkClick("children")}
       >
-        Children
+        Child
       </a>
     </nav>
   );

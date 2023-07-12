@@ -1,0 +1,60 @@
+.card {
+  padding: 10px;
+  min-height: 250px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgba(5, 5, 5, 0.24);
+  border: 1px solid var(--main-font-color);
+  border-color: var(--main-font-color);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+  float: left;
+  min-height: 200px;
+}
+
+.rank {
+  text-align: left;
+  font-weight: 300;
+  opacity: 0.5;
+  color: var(--main-font-color);
+}
+
+.cardHeaderCover {
+  width: 40%;
+}
+
+.cardHeaderInfo {
+  width: 60%;
+}
+
+.bookCover {
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-highlight-color);
+}
+
+.author {
+  margin-top: 0rem;
+  opacity: 0.9;
+  font-weight: 500;
+  color: var(--main-highlight-color);
+}
+
+.footerCard {
+  margin-top: 1.5rem;
+}
+
+.description {
+  color: var(--main-font-color);
+  opacity: 0.75;
+  font-size: 0.8rem;
+}

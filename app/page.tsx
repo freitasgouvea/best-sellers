@@ -1,3 +1,23 @@
+import { BookCard } from "../components/BookCard";
+
 export default function Page() {
-  return <h1>Hello</h1>
+  return (
+    <div className="book-list">
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+    </div>
+  );
 }
