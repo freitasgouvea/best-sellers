@@ -1,17 +1,17 @@
 body {
-  color: #24272A;
-  background-color: #FFFFFF;
+  color: #001C30;
+  background-color: #F1F6F9;
 }
 
 [data-theme="dark"] body {
-  color: #FFFFFF;
-  background-color: #24272A;
+  color: #F1F6F9;
+  background-color: #001C30;
 }
 
 button {
   border-radius: 8px;
   background-color: #141618;
-  color: #FFFFFF;
+  color: #F1F6F9;
   border: 1px solid #141618;
   font-weight: bold;
   padding: 1rem;
@@ -21,7 +21,7 @@ button {
   &:hover {
     background-color: transparent;
     border: 1px solid #141618;
-    color: #24272A;
+    color: #001C30;
   }
 
   &:disabled,
@@ -33,31 +33,31 @@ button {
   &:disabled:hover,
   &[disabled]:hover {
     background-color: #141618;
-    color: #FFFFFF;
+    color: #F1F6F9;
     border: 1px solid #141618;
   }
 }
 
 [data-theme="dark"] button {
-  background-color: #FFFFFF;
+  background-color: #F1F6F9;
   color: #141618;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #F1F6F9;
 
   &:hover {
     background-color: transparent;
-    border: 1px solid #FFFFFF;
-    color: #24272A;
+    border: 1px solid #F1F6F9;
+    color: #001C30;
   }
 
   &:disabled,
   &[disabled] {
-    border: 1px solid #FFFFFF;
+    border: 1px solid #F1F6F9;
   }
 
   &:disabled:hover,
   &[disabled]:hover {
-    background-color: #FFFFFF;
+    background-color: #F1F6F9;
     color: #141618;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #F1F6F9;
   }
 }
