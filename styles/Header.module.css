@@ -1,0 +1,27 @@
+.pageHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;  
+}
+
+.headerTitle {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerRightContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
