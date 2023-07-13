@@ -1,26 +1,39 @@
 import styles from "../styles/BookCard.module.css";
+import { Book } from "../types/book";
 
-export const BookCard = () => {
+type BookCardProps = {
+  book: Book;
+};
+
+export const BookCard: React.FC<BookCardProps> = ({ book }) => {
   return (
-    <>
-      <div className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.cardRank}>
-          <div className={styles.rank}># 1</div>
+        <div className={styles.rank}># {book.rank}</div>
+      </div>
+      <div className={styles.cardHeader}>
+        <div className={styles.cardHeaderInfo}>
+          <p className={styles.title}>{book.title}</p>
+          <p className={styles.author}>{book.contributor}</p>
+          <p className={styles.description}>{book.description}</p>
         </div>
-        <div className={styles.cardHeader}>
-          <div className={styles.cardHeaderInfo}>
-            <p className={styles.title}>The Five Star Weekend</p>
-            <p className={styles.author}>by Elin Hilderbrand</p>
-            <p className={styles.description}>
-            After a tragedy, a popular food blogger brings friends from distinct times in her life to spend a weekend in
-            Nantucket.
-          </p>
-          </div>
-          <div className={styles.cardHeaderCover}>
-            <img className={styles.bookCover} src="https://storage.googleapis.com/du-prd/books/images/9780316258777.jpg" />
+        <div className={styles.cardHeaderCover}>
+          <img className={styles.bookCover} src={book.book_image} alt="Book Cover" />
+        </div>
+      </div>
+      <div className={styles.cardFooter}>
+        <div className="dropdown">
+          <button className={styles.cardButton}>Buy</button>
+          <div className="dropdown-content">
+            {book.buy_links &&
+              book.buy_links.map((item) => (
+                <a href={item.url} target="blank">
+                  {item.name}
+                </a>
+              ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

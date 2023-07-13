@@ -4,7 +4,6 @@
   --main-highlight-color: #fff;
   --main-link-active-color: #fff;
   --main-border-color: #8080804d;
-  --wishlist-bg-color: #000;
   --footer-height: 2rem;
   --main-bg-color-dark: #202020; 
 }
@@ -43,9 +42,9 @@ h3 {
 
 button {
   border-radius: 8px;
-  background-color: #141618;
+  background-color: #0e0e0e;
   color: #F1F6F9;
-  border: 1px solid #141618;
+  border: 1px solid #0e0e0e;
   font-weight: bold;
   padding: 0.5rem;
   cursor: pointer;
@@ -53,27 +52,27 @@ button {
 
   &:hover {
     background-color: transparent;
-    border: 1px solid #141618;
+    border: 1px solid #0e0e0e;
     color: #001C30;
   }
 
   &:disabled,
   &[disabled] {
-    border: 1px solid #141618;
+    border: 1px solid #0e0e0e;
     cursor: not-allowed;
   }
 
   &:disabled:hover,
   &[disabled]:hover {
-    background-color: #141618;
+    background-color: #0e0e0e;
     color: #F1F6F9;
-    border: 1px solid #141618;
+    border: 1px solid #0e0e0e;
   }
 }
 
 [data-theme="dark"] button {
   background-color: #F1F6F9;
-  color: #141618;
+  color: #0e0e0e;
   border: 1px solid #F1F6F9;
 
   &:hover {
@@ -90,9 +89,42 @@ button {
   &:disabled:hover,
   &[disabled]:hover {
     background-color: #F1F6F9;
-    color: #141618;
+    color: #0e0e0e;
     border: 1px solid #F1F6F9;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  border-radius: 0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 150px;
+  font-size: 0.8rem;
+  background-color: #f1f1f1;
+  color: #0e0e0e;
+}
+
+.dropdown-content a:hover {
+  background-color: #0e0e0e;
+  color: #f1f1f1;
 }
 
 .wrapper {

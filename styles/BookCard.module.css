@@ -49,12 +49,18 @@
   color: var(--main-highlight-color);
 }
 
-.footerCard {
-  margin-top: 1.5rem;
-}
-
 .description {
   color: var(--main-font-color);
   opacity: 0.75;
   font-size: 0.8rem;
+}
+
+.cardFooter {
+  justify-content: end;
+}
+
+.cardButton {
+  padding: 10px 20px;
+  margin: 4px 2px;
+  cursor: pointer;
 }

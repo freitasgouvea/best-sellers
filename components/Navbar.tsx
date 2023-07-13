@@ -28,30 +28,6 @@ export const Navbar = () => {
       >
         Non Fiction
       </a>
-      <a
-        key="business"
-        className={activeLink === "business" ? styles.navbarLinkActive : styles.navbarLink}
-        href="#"
-        onClick={() => handleLinkClick("business")}
-      >
-        Business
-      </a>
-      <a
-        key="young-adults"
-        className={activeLink === "young-adults" ? styles.navbarLinkActive : styles.navbarLink}
-        href="#"
-        onClick={() => handleLinkClick("young-adults")}
-      >
-        Young
-      </a>
-      <a
-        key="children"
-        className={activeLink === "children" ? styles.navbarLinkActive : styles.navbarLink}
-        href="#"
-        onClick={() => handleLinkClick("children")}
-      >
-        Child
-      </a>
     </nav>
   );
 };
