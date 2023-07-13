@@ -7,13 +7,9 @@
   border-color: var(--bg-color-light);
 }
 
-.cardHeader {
-  display: flex;
-  align-items: center;
-  grid-gap: 1rem;
-  gap: 1rem;
-  float: left;
-  min-height: 200px;
+.CardHeader {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
 }
 
 .rank {
@@ -23,11 +19,20 @@
   color: var(--font-color);
 }
 
-.cardHeaderCover {
+.cardContent {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+  float: left;
+  min-height: 200px;
+}
+
+.cardContentCover {
   width: 40%;
 }
 
-.cardHeaderInfo {
+.cardContentInfo {
   width: 60%;
 }
 
@@ -56,10 +61,10 @@
 }
 
 .cardFooter {
-  justify-content: end;
 }
 
 .cardButton {
+  align-items: center;
   padding: 10px 20px;
   margin: 4px 2px;
   cursor: pointer;
