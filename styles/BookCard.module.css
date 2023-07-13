@@ -3,8 +3,8 @@
   min-height: 250px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(5, 5, 5, 0.24);
-  border: 1px solid var(--main-font-color);
-  border-color: var(--main-font-color);
+  border: 1px solid var(--bg-color-light);
+  border-color: var(--bg-color-light);
 }
 
 .cardHeader {
@@ -17,10 +17,10 @@
 }
 
 .rank {
+  font-size: 1.1rem;
   text-align: left;
   font-weight: 300;
-  opacity: 0.5;
-  color: var(--main-font-color);
+  color: var(--font-color);
 }
 
 .cardHeaderCover {
@@ -39,18 +39,18 @@
   margin-bottom: 0.2rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--main-highlight-color);
+  color: var(--highlight-color);
 }
 
 .author {
   margin-top: 0rem;
   opacity: 0.9;
   font-weight: 500;
-  color: var(--main-highlight-color);
+  color: var(--highlight-color);
 }
 
 .description {
-  color: var(--main-font-color);
+  color: var(--font-color);
   opacity: 0.75;
   font-size: 0.8rem;
 }

@@ -3,6 +3,17 @@
   grid-area: sidebar;
 }
 
+.sidebarRow {
+  @media (max-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .sidebarItem {
   line-height: 2;
   cursor: pointer;

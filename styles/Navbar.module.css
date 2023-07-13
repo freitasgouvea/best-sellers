@@ -1,6 +1,6 @@
 .navbar {
   margin-bottom: 30px;
-  border-bottom: 1px solid var(--main-border-color);
+  border-bottom: 1px solid transparent;
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
@@ -14,7 +14,7 @@
   transition: all 0.5s;
   font-size: 13px;
   padding-bottom: 11px;
-  color: var(--main-font-color);
+  color: var(--font-color);
   border-bottom: 3px solid transparent;
 }
 
@@ -25,8 +25,8 @@
   transition: all 0.5s;
   font-size: 13px;
   padding-bottom: 11px;
-  color: var(--main-link-active-color);
-  border-bottom: 3px solid #FADA5E;
+  color: var(--highlight-color);
+  border-bottom: 3px solid var(--border-color-gold);
   font-weight: 700;
 }
 

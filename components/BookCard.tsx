@@ -6,7 +6,10 @@ export const BookCard = ({ book }: { book: Book }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardRank}>
+        <div className="tooltip">
         <div className={styles.rank}># {rank}</div>
+          <span className="tooltiptext">Tooltip text</span>
+        </div>
       </div>
       <div className={styles.cardHeader}>
         <div className={styles.cardHeaderInfo}>
