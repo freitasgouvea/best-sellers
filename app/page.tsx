@@ -1,13 +1,14 @@
-import { BookCard } from "../components/BookCard";
-import { getLatestData } from "../api/data";
-import { Book } from "../types/book";
+import { getData } from "../api/data";
+import { Navbar } from "../components/Navbar";
+import { BookList } from "../components/BookList";
 
 export default async function Page() {
-  const data: any = await getLatestData();
-
-  const dataFiction: Book[] = data ? data.results?.lists[0]?.books : undefined;
+  const latestData: any = await getData();
 
   return (
-    <div className="book-list">{dataFiction && dataFiction.map((book, i) => <BookCard book={book} key={i} />)}</div>
+    <main>
+      <Navbar />
+      <BookList latestData={latestData} />
+    </main>
   );
 }

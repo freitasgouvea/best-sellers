@@ -1,6 +1,6 @@
 "use client";
 
-import { SetStateAction, useContext, useState } from "react";
+import { useContext } from "react";
 import styles from "../styles/Navbar.module.css";
 import { NavigationContext } from "../app/providers";
 import { NavigationContextType } from "../types/context";

@@ -61,11 +61,12 @@
 }
 
 .cardFooter {
+  margin-bottom: 0;
 }
 
 .cardButton {
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
   margin: 4px 2px;
   cursor: pointer;
 }

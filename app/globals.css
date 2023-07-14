@@ -111,25 +111,6 @@ main {
   }
 }
 
-.book-list {
-  display: grid;
-  grid-template-columns: minmax(200px, auto);
-  grid-gap: 20px;
-  width: 100%;
-
-  @media (min-width: 800px) {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-  }
-  
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-  }
-  
-  @media (min-width: 1600px) {
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-  }
-}
-
 .dropdown {
   position: relative;
   display: inline-block;

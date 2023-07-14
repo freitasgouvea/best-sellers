@@ -1,22 +1,27 @@
-export async function getLatestData() {
-  const apikey = process.env.NEXT_PUBLIC_NYT_API_KEY;
+const apikey = process.env.NEXT_PUBLIC_NYT_API_KEY;
 
-  // const date = new Date().toISOString().slice(0, 10);
+export async function getData(date?: string) {
+  let url = `https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=${apikey}`;
 
-  let response;
-  
-  await fetch(`https://api.nytimes.com/svc/books/v3/lists/full-overview.json?&api-key=${apikey}`, {
-    "method": "GET",
-    "headers": {
-      "Accept": "application/json"
-    },
-  }).then(
-    res => {response = res.json()}
-  )
- 
-  //   if (!res.ok) {
-  //     throw new Error(`Failed to fetch data ${date} ${apikey}`);
-  //   }
+  if (date) {
+    url += `&published_date=${date}`;
+  }
 
-  return response;
+  try {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }

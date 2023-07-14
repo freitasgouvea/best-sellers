@@ -2,7 +2,11 @@ import styles from "../styles/BookCard.module.css";
 import { Book } from "../types/book";
 import { InfoIcon } from "./InfoIcon";
 
-export const BookCard = ({ book }: { book: Book }) => {
+interface BookCardProps {
+  book: Book;
+}
+
+export const BookCard = ({ book }: BookCardProps) => {
   const {
     rank,
     title,
@@ -14,9 +18,10 @@ export const BookCard = ({ book }: { book: Book }) => {
     rank_last_week: rankLastWeek,
   } = book;
 
-  const rankVariation = rankLastWeek - rank;
+  const rankVariation: number = rankLastWeek - rank;
 
-  const infoIconType = rankLastWeek === 0 ? "new" : rankVariation > 0 ? "up" : rankVariation < 0 ? "down" : "equal";
+  const infoIconType: string =
+    rankLastWeek === 0 ? "new" : rankVariation > 0 ? "up" : rankVariation < 0 ? "down" : "equal";
 
   return (
     <div className={styles.card}>
@@ -43,7 +48,7 @@ export const BookCard = ({ book }: { book: Book }) => {
       </div>
       <div className={styles.cardFooter}>
         <div className="dropdown">
-          <button className={styles.cardButton}>Buy</button>
+          <button className={styles.cardButton}>Buy ⌄</button>
           <div className="dropdown-content">
             {BuyLinks &&
               BuyLinks.map((item, key) => (
