@@ -8,7 +8,7 @@ export const NavigationContext = createContext<NavigationContextType | null>(nul
 export const DateContext = createContext<DateContextType | null>(null);
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  const [navigation, setNavigation] = useState<string>("fiction");
+  const [navigation, setNavigation] = useState<string>("CombinedPrintAndEBookFiction");
 
   const setNavigationContext = (list: string) => {
     setNavigation(list);

@@ -1,24 +1,17 @@
-.sidebar {
-  background: var(--wishlist-bg-color);
-  grid-area: sidebar;
-}
-
-.sidebarRow {
-  @media (max-width: 800px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  @media (max-width: 600px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.sidebarItem {
+.SidebarItem {
+  font-size: 0.8rem;
+  margin-top: 0.5rem; 
   line-height: 2;
   cursor: pointer;
 }
 
-.sidebarHeader {
-  margin-bottom: 5px;
+.SidebarItemActive {
+  font-size: 0.8rem;
+  margin-top: 0.5rem; 
+  line-height: 2;
+  cursor: pointer;
+  font-weight: 700;
+  @media (min-width: 800px) {
+    border-right: 4px solid var(--border-color-gold);
+  }
 }

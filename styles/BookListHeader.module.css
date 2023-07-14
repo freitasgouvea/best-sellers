@@ -6,10 +6,39 @@
   }
 
   @media (min-width: 600px) {
+    margin-left: 1rem;
     grid-template-columns: 4fr 1fr;
   }
 }
 
+.BookListHeaderTitleMobile {
+  margin-top: 0.1rem;
+  font-weight: 500;
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
+
+.BookListHeaderSubTitleDesktop {
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.BookListHeaderTitleDesktop {
+  margin-top: 0.1rem;
+  font-weight: 500;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
 .CalendarButton {
-    min-width: 8rem;
+  margin-top: 0.4rem;
+    @media (min-width: 400px) {
+      min-width: 8rem;
+    }
+  @media (min-width: 800px) {
+    margin-top: 0.4rem;
+  }
 }

@@ -49,14 +49,14 @@
 
 .author {
   margin-top: 0rem;
-  opacity: 0.9;
+  opacity: 0.95;
   font-weight: 500;
   color: var(--highlight-color);
 }
 
 .description {
   color: var(--font-color);
-  opacity: 0.75;
+  opacity: 0.9;
   font-size: 0.8rem;
 }
 

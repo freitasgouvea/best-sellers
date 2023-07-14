@@ -4,12 +4,16 @@ import { useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import { DateContext } from "../app/providers";
-import { DateContextType } from "../types/context";
+import { DateContext, NavigationContext } from "../app/providers";
+import { DateContextType, NavigationContextType } from "../types/context";
 import styles from "../styles/BookListHeader.module.css";
+import { weeklyBestSellersLists } from "../config/lists";
 
 export const BookListHeader = () => {
+  const { navigation } = useContext(NavigationContext) as NavigationContextType;
   const { date, setDateContext } = useContext(DateContext) as DateContextType;
+
+  const title = weeklyBestSellersLists[navigation]?.name;
 
   const today = new Date();
 
@@ -39,7 +43,11 @@ export const BookListHeader = () => {
   return (
     <>
       <div className={styles.BookListHeader}>
-        <h2>Featured Books</h2>
+        <div>
+          <h4 className={styles.BookListHeaderSubTitleDesktop}>The New York Times Best Sellers</h4>
+          <h2 className={styles.BookListHeaderTitleDesktop}>{title}</h2>
+          <h3 className={styles.BookListHeaderTitleMobile}>The New York Times <br/> Best Sellers</h3>
+        </div>
         <DatePicker
           todayButton="Latest Lists"
           minDate={new Date("2010-01-01")}

@@ -7,7 +7,6 @@ export const Header = () => {
     <header className={styles.pageHeader}>
       <div className={styles.headerLogo}>
         <Logo size={32} />
-        <p className={styles.headerTitle}>NYT Best Sellers</p>
       </div>
       <div className={styles.headerRightContent}>
         <ToggleButton />
