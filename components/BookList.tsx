@@ -8,6 +8,8 @@ import { DateContext, NavigationContext } from "../app/providers";
 import { DateContextType, NavigationContextType } from "../types/context";
 import { getData } from "../api/data";
 import { SkeletonList } from "./Skeleton";
+import { Navbar } from "./Navbar";
+import { BookListHeader } from "./BookListHeader";
 
 interface BookListProps {
   latestData: any;
@@ -47,7 +49,8 @@ export const BookList = ({ latestData }: BookListProps) => {
 
   return (
     <>
-      <h2>Featured Books {date ? date : "Today"}</h2>
+      <BookListHeader />
+      <Navbar />
       <div className={styles.bookList}>
         {loading && <SkeletonList />}
         {!loading && selectedData && selectedData.map((book, i) => <BookCard book={book} key={i} />)}

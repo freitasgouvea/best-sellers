@@ -1,0 +1,15 @@
+.BookListHeader {
+  display: grid;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+.CalendarButton {
+    min-width: 8rem;
+}
