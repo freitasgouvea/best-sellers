@@ -35,7 +35,7 @@ export const BookListHeader = () => {
   };
 
   const renderSelectedDate = (): string => {
-    return date ? date : "Today";
+    return date ? date : "Latest List";
   };
 
   const calendarButton = <button className={styles.CalendarButton}>{renderSelectedDate()} ⌄</button>;
@@ -46,16 +46,17 @@ export const BookListHeader = () => {
         <div>
           <h4 className={styles.BookListHeaderSubTitleDesktop}>The New York Times Best Sellers</h4>
           <h2 className={styles.BookListHeaderTitleDesktop}>{title}</h2>
-          <h3 className={styles.BookListHeaderTitleMobile}>The New York Times <br/> Best Sellers</h3>
+          <h2 className={styles.BookListHeaderTitleMobile}>The New York Times Best Sellers</h2>
         </div>
         <DatePicker
-          todayButton="Latest Lists"
+          todayButton="Today"
           minDate={new Date("2010-01-01")}
           maxDate={today}
           onChange={(pickedDate) => handleDateChange(pickedDate)}
           customInput={calendarButton}
           disabledKeyboardNavigation
           nextYearButtonLabel
+          showYearDropdown
         />
       </div>
     </>
