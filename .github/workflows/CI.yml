@@ -45,4 +45,6 @@ jobs:
         
       - name: Create test build
         run: npm run build
+        env:
+          NEXT_PUBLIC_NYT_API_KEY: ${{ secrets.NEXT_PUBLIC_NYT_API_KEY }}
       
