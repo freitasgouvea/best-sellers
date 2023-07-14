@@ -21,7 +21,7 @@ export const BookCard = ({ book }: BookCardProps) => {
   const rankVariation: number = rankLastWeek - rank;
 
   const infoIconType: string =
-    rankLastWeek === 0 ? "new" : rankVariation > 0 ? "up" : rankVariation < 0 ? "down" : "equal";
+    weeksOnList === 1 ? "new" : (rankVariation > 0 || rankLastWeek === 0) ? "up" : rankVariation < 0 ? "down" : "equal";
 
   return (
     <div className={styles.card}>
