@@ -10,6 +10,7 @@ import { getData } from "../api/data";
 import { SkeletonList } from "./Skeleton";
 import { Navbar } from "./Navbar";
 import { BookListHeader } from "./BookListHeader";
+import { weeklyBestSellersLists } from "../config/lists";
 
 interface BookListProps {
   latestData: any;
@@ -35,16 +36,9 @@ export const BookList = ({ latestData }: BookListProps) => {
   }, [date]);
 
   useMemo(() => {
-    switch (navigation) {
-      case "fiction":
-        setSelectedData(data?.results?.lists[0]?.books);
-        break;
-      case "non-fiction":
-        setSelectedData(data?.results?.lists[1]?.books);
-        break;
-      default:
-        break;
-    }
+    const index = weeklyBestSellersLists[navigation]?.index;
+    setSelectedData(data?.results?.lists[index]?.books);
+    return;
   }, [navigation, data]);
 
   return (

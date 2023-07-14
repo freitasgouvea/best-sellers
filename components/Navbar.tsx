@@ -4,6 +4,7 @@ import { useContext } from "react";
 import styles from "../styles/Navbar.module.css";
 import { NavigationContext } from "../app/providers";
 import { NavigationContextType } from "../types/context";
+import { weeklyBestSellersLists } from "../config/lists";
 
 export const Navbar = () => {
   const { navigation, setNavigationContext } = useContext(NavigationContext) as NavigationContextType;
@@ -14,22 +15,15 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a
-        key="fiction"
-        className={navigation === "fiction" ? styles.navbarLinkActive : styles.navbarLink}
-        href="#"
-        onClick={() => handleLinkClick("fiction")}
-      >
-        Fiction
-      </a>
-      <a
-        key="non-fiction"
-        className={navigation === "non-fiction" ? styles.navbarLinkActive : styles.navbarLink}
-        href="#"
-        onClick={() => handleLinkClick("non-fiction")}
-      >
-        Non Fiction
-      </a>
+      {Object.entries(weeklyBestSellersLists).map(([key, value]) => (
+        <a
+          key={key}
+          className={navigation === key ? styles.navbarLinkActive : styles.navbarLink}
+          onClick={() => handleLinkClick(key)}
+        >
+          {value.name}
+        </a>
+      ))}
     </nav>
   );
 };

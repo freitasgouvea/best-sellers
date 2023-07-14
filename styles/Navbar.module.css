@@ -1,47 +1,38 @@
 .navbar {
   margin-top: 1rem;
-  margin-bottom: 30px;
-  border-bottom: 1px solid transparent;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: start;
-  grid-gap: 10px;
+  justify-content: flex-start;
+  grid-gap: .5rem;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+  @media (min-width: 800px) {
+    display: none;
+  }
 }
 
 .navbarLink {
   display: inline-block;
-  padding: 5px;
+  padding: 0.2rem;
   text-decoration: none;
   transition: all 0.5s;
-  font-size: 13px;
-  padding-bottom: 11px;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
   color: var(--font-color);
   border-bottom: 3px solid transparent;
+  margin-bottom: 0.6rem;
 }
 
 .navbarLinkActive {
   display: inline-block;
-  padding: 5px;
+  padding: 0.2rem;
   text-decoration: none;
   transition: all 0.5s;
-  font-size: 13px;
-  padding-bottom: 11px;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
   color: var(--highlight-color);
   border-bottom: 3px solid var(--border-color-gold);
   font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
-.navbarLink:nth-of-type(4),
-.navbarLink:nth-of-type(5),
-.navbarLink:nth-of-type(6) {
-  display: none;
-}
-
-@media (min-width: 800px) {
-  .navbarLink:nth-of-type(2),
-  .navbarLink:nth-of-type(3),
-  .navbarLink:nth-of-type(4),
-  .navbarLink:nth-of-type(5) {
-    display: inline;
-  }
-}
