@@ -168,3 +168,20 @@ main {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.skeleton-loading {
+  background-color: var(--bg-color);
+  animation: skeleton-loading-animation 1s infinite ease-in-out;
+}
+
+@keyframes skeleton-loading-animation {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
