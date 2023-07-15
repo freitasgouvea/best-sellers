@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -22,6 +24,7 @@ body {
   --highlight-color: #000;
   --border-color: #8080804d;
   --border-color-gold: #FADA5E;
+  --card-background-color: #ffffffc7;
 }
 
 [data-theme="dark"] body {
@@ -33,6 +36,7 @@ body {
   --highlight-color: #fff;
   --border-color: #8080804d;
   --border-color-gold: #FADA5E;
+  --card-background-color: #ffffff04;
 }
 
 img {
@@ -62,19 +66,22 @@ h4 {
 }
 
 button {
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   background-color: var(--bg-color-button);
   color: var(--font-color-button);
   border: 1px solid var(--border-color);
   font-weight: bold;
   padding: 0.5rem;
+  opacity: 0.95;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  box-shadow: var(--bg-color-light) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
 
   &:hover {
     border: 1px solid var(--highlight-color);
-    background-color: transparent;
-    color: var(--highlight-color);
+    opacity: 1;
+    transform: translateY(-1px);
   }
 }
 
@@ -99,7 +106,7 @@ main {
   grid-template-areas: 
     "main"
     "sidebar";
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     grid-template-columns: 200px auto;
     grid-template-areas: "sidebar main";
   }
@@ -139,7 +146,7 @@ main {
 
 .dropdown-content a:hover {
   background-color: #0e0e0e;
-  color: #f1f1f1;
+  color: var(--font-color);
   font-weight: 600;
 }
 

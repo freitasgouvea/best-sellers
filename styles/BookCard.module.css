@@ -1,13 +1,15 @@
 .card {
+  min-width: 280px;
   padding: 10px;
   min-height: 250px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(5, 5, 5, 0.24);
   border: 1px solid var(--bg-color-light);
   border-color: var(--bg-color-light);
+  background-color: var(--card-background-color);
 }
 
-.CardHeader {
+.cardHeader {
   display: grid;
   grid-template-columns: 9fr 1fr;
 }
@@ -28,16 +30,11 @@
   min-height: 200px;
 }
 
-.cardContentCover {
-  width: 40%;
-}
-
 .cardContentInfo {
   width: 60%;
-}
-
-.bookCover {
-  object-fit: cover;
+  @media (min-width: 500px) {
+    height: 280px;
+  }
 }
 
 .title {
@@ -60,12 +57,17 @@
   font-size: 0.8rem;
 }
 
-.cardFooter {
-  margin-bottom: 0;
+
+.cardContentCover {
+  margin-top: 2rem;
+  width: 40%;
+}
+
+.bookCover {
+  object-fit: cover;
 }
 
 .cardButton {
-  align-items: center;
   padding: 8px 20px;
   margin: 4px 2px;
   cursor: pointer;

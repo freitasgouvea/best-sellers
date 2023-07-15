@@ -6,7 +6,7 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   cursor: pointer;
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     display: none;
   }
 }

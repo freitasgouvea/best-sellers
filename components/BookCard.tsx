@@ -25,7 +25,7 @@ export const BookCard = ({ book }: BookCardProps) => {
 
   return (
     <div className={styles.card}>
-      <div className={styles.CardHeader}>
+      <div className={styles.cardHeader}>
         <div className={styles.rank}># {rank}</div>
         <div className="tooltip">
           <InfoIcon type={infoIconType} size={24} />
