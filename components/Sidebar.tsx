@@ -11,7 +11,6 @@ export const Sidebar = () => {
 
   const handleListClick = (key: string) => {
     setNavigationContext(key);
-    console.log(key)
     window.scrollTo(0, 0);
   };
 

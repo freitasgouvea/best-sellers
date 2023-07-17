@@ -5,7 +5,7 @@ export const SkeletonList = () => {
 
   const renderSkeletonCards = () => {
     return Array.from({ length: cardsCount }, (_, index) => (
-      <div key={index} className="skeleton-loading">
+      <div key={index} className="skeleton-loading" data-testid="skeleton-card">
         <div className={styles.card}></div>
       </div>
     ));
