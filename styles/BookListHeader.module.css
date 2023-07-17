@@ -1,7 +1,7 @@
 .BookListHeader {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 
   @media (max-width: 600px) {
     grid-template-columns: 2fr 1fr;

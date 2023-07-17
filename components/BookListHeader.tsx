@@ -44,8 +44,8 @@ export const BookListHeader = () => {
     <>
       <div className={styles.BookListHeader}>
         <div>
-          <h4 className={styles.BookListHeaderSubTitleDesktop}>The New York Times Best Sellers</h4>
-          <h2 className={styles.BookListHeaderTitleDesktop}>{title}</h2>
+        <h1 className={styles.BookListHeaderSubTitleDesktop}>The New York Times Best Sellers</h1>
+          <h3 className={styles.BookListHeaderTitleDesktop}>{title}</h3>
           <h2 className={styles.BookListHeaderTitleMobile}>The New York Times Best Sellers</h2>
         </div>
         <DatePicker
