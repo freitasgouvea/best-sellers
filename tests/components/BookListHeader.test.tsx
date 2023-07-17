@@ -25,17 +25,17 @@ describe("BookListHeader", () => {
     );
   });
 
-  it("renders the title correctly", () => {
+  test("renders the title correctly", () => {
     const titleElement = screen.getByText("Combined Print & E-Book Fiction");
     expect(titleElement).toBeInTheDocument();
   });
 
-  it("renders the date picker correctly", () => {
+  test("renders the date picker correctly", () => {
     const datePickerElement = screen.getByRole("button");
     expect(datePickerElement).toBeInTheDocument();
   });
 
-  it("calls setDateContext with the picked date when the date changes", () => {
+  test("calls setDateContext with the picked date when the date changes", () => {
     const datePickerButton = screen.getByRole("button");
     fireEvent.click(datePickerButton);
 
@@ -46,7 +46,7 @@ describe("BookListHeader", () => {
     expect(dateContextValue.setDateContext).toHaveBeenCalledWith(selectedDateFormatted);
   });
 
-  it("calls setDateContext with null when select today", () => {
+  test("calls setDateContext with null when select today", () => {
     const datePickerButton = screen.getByRole("button");
     fireEvent.click(datePickerButton);
 

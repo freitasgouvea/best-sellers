@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { useContext } from "react";
 import { Navbar } from "../../components/Navbar";
-import { NavigationContext } from "../../app/providers";
 import { NavigationContextType } from "../../types/context";
 import { weeklyBestSellersLists } from "../../config/lists";
 
@@ -20,7 +19,7 @@ describe("Navbar", () => {
     } as NavigationContextType);
   });
 
-  it("renders the navbar with the correct weekly lists", () => {
+  test("renders the navbar with the correct weekly lists", () => {
     render(<Navbar />);
     const navbar = screen.getByRole("navigation");
     const navbarLinks = screen.getAllByTestId("navbar-link");
@@ -29,7 +28,7 @@ describe("Navbar", () => {
     expect(navbarLinks).toHaveLength(Object.keys(weeklyBestSellersLists).length);
   });
 
-  it("calls setNavigationContext when a navbar link is clicked", () => {
+  test("calls setNavigationContext when a navbar link is clicked", () => {
     render(<Navbar />);
     const navbarLink = screen.getByText(weeklyBestSellersLists.CombinedPrintAndEBookFiction.name);
 
@@ -38,7 +37,7 @@ describe("Navbar", () => {
     expect(setNavigationContextMock).toHaveBeenCalledTimes(1);
   });
 
-  it("applies the active style to the current navigation link", () => {
+  test("applies the active style to the current navigation link", () => {
     (useContext as jest.Mock).mockReturnValueOnce({
       navigation: "CombinedPrintAndEBookFiction",
       setNavigationContext: setNavigationContextMock,
@@ -49,7 +48,7 @@ describe("Navbar", () => {
     expect(activeNavbarLink).toHaveClass("navbarLinkActive");
   });
 
-  it("applies the inactive style to other navigation links", () => {
+  test("applies the inactive style to other navigation links", () => {
     (useContext as jest.Mock).mockReturnValueOnce({
       navigation: "CombinedPrintAndEBookNonfiction",
       setNavigationContext: setNavigationContextMock,

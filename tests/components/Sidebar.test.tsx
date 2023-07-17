@@ -19,7 +19,7 @@ describe("Sidebar", () => {
     } as NavigationContextType);
   });
 
-  it("renders the sidebar with the correct list", () => {
+  test("renders the sidebar with the correct list", () => {
     render(<Sidebar />);
     const sidebar = screen.getByRole("list");
     const sidebarItems = screen.getAllByRole("listitem");
@@ -28,7 +28,7 @@ describe("Sidebar", () => {
     expect(sidebarItems).toHaveLength(Object.keys(weeklyBestSellersLists).length);
   });
 
-  it("applies the active style to the current navigation item", () => {
+  test("applies the active style to the current navigation item", () => {
     (useContext as jest.Mock).mockReturnValueOnce({
       navigation: "CombinedPrintAndEBookFiction",
       setNavigationContext: setNavigationContextMock,
@@ -39,7 +39,7 @@ describe("Sidebar", () => {
     expect(activeListItem).toHaveClass("SidebarItemActive");
   });
 
-  it("applies the inactive style to other navigation items", () => {
+  test("applies the inactive style to other navigation items", () => {
     (useContext as jest.Mock).mockReturnValueOnce({
       navigation: "CombinedPrintAndEBookNonfiction",
       setNavigationContext: setNavigationContextMock,
@@ -50,7 +50,7 @@ describe("Sidebar", () => {
     expect(inactiveListItem).toHaveClass("SidebarItem");
   });
 
-  it("update navigation context and scrolls to the top when a list item is clicked", () => {
+  test("update navigation context and scrolls to the top when a list item is clicked", () => {
     (useContext as jest.Mock).mockReturnValueOnce({
       navigation: "CombinedPrintAndEBookFiction",
       setNavigationContext: setNavigationContextMock,

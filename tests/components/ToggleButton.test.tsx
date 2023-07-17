@@ -5,7 +5,7 @@ import { ToggleButton } from "../../components/ToggleButton";
 jest.mock("next-themes");
 
 describe("ToggleButton", () => {
-  it("renders the toggle button with the correct initial theme icon", () => {
+  test("renders the toggle button with the correct initial theme icon", () => {
     (useTheme as jest.Mock).mockReturnValue({
       resolvedTheme: "dark",
       setTheme: jest.fn(),
@@ -18,7 +18,7 @@ describe("ToggleButton", () => {
     expect(toggleButton).toHaveTextContent("🌞");
   });
 
-  it("calls setTheme function when clicked", () => {
+  test("calls setTheme function when clicked", () => {
     (useTheme as jest.Mock).mockReturnValue({
       resolvedTheme: "dark",
       setTheme: jest.fn(),

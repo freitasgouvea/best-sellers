@@ -3,7 +3,7 @@ import { SkeletonList } from "../../components/Skeleton";
 import styles from "../styles/BookCard.module.css";
 
 describe("Skeleton", () => {
-  it("renders the skeleton cards with the correct styles", () => {
+  test("renders the skeleton cards with the correct styles", () => {
     render(<SkeletonList />);
     const skeletonCards = screen.getAllByTestId("skeleton-card");
 
