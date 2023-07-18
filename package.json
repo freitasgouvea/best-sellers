@@ -12,6 +12,21 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freitasgouvea/best-sellers.git"
+  },
+  "keywords": [
+    "NextJs",
+    "React",
+    "Typescript"
+  ],
+  "author": "Flavio Gouvea",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://freitasgouvea.github.io/best-sellers/"
+  },
+  "homepage": "",
   "dependencies": {
     "@types/node": "20.4.0",
     "@types/react-dom": "18.2.6",

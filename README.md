@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# best-sellers
 
-## Getting Started
+Best-Sellers is a user-friendly web application built with Next.js 13, React and Typescript.
 
-First, run the development server:
+## Overview
+
+This application is designed to provide book enthusiasts with seamless access to The New York Times Best Sellers lists and expore books across all categories.
+
+One of the features of this application is its a calendar integration, allowing users to delve into all-time rankings for a specific date. By selecting a date on the calendar, users can explore the best-selling books of that particular day in the past.
+
+Moreover, this application serves as a convenient hub for book lovers, providing direct links to purchase the listed books. By simply clicking, users are seamlessly redirected to popular online retailers, ensuring a hassle-free experience when it comes to acquiring their desired reads.
+
+This application is a tool for avid readers and literary enthusiasts seeking to stay up-to-date with the latest and greatest in the world of literature.
+
+## Technologies
+
+- [Node](https://nodejs.org/en/blog/release/v18.12.0) : `v18.12.0`
+- [NextJs](https://nextjs.org/) : `v13.4.9`
+- [React](https://react.dev/) : `v18.2.0`
+- [Typescript](https://www.typescriptlang.org/) : `v5.1.6`
+- [Jest](https://jestjs.io/) : `v29.6.1`
+
+## Installation
+
+Clone the repository or download the project files:
+
+```bash
+git clone https://github.com/freitasgouvea/best-sellers.git
+```
+
+Then navigate to the project directory:
+
+```bash
+cd best-sellers
+```
+
+And finally, install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+## Usage
+
+Before run this project, create `.env.local` file on root and introduce your [New York Times API](https://developer.nytimes.com/) key in `NEXT_PUBLIC_NYT_API_KEY` envoirment variable:
+
+```
+NEXT_PUBLIC_NYT_API_KEY=//api-key
+```
+
+### Development
+
+Run the following command to start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server will start at [http://localhost:3000/](http://localhost:3000/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run the following command to generate an optimized version for production:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+And then run  the following command to start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The  production server can be accessed at [http://localhost:3000/](http://localhost:3000/)
 
-## Deploy on Vercel
+### Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you want to execute unit tests, use the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm test
+```
+
+This will execute the test suite using Jest and the results will show in the console.
+
+If you want to execute unit tests and see the coverage, use the following command: 
+
+```bash
+npm test:coverage
+```
+
+The results with the code coverage will show in the console.
+
+## Contributing
+
+Contributions to best-sellers are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
