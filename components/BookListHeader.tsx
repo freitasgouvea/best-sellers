@@ -44,20 +44,21 @@ export const BookListHeader = () => {
     <>
       <div className={styles.BookListHeader}>
         <div>
-        <h1 className={styles.BookListHeaderSubTitleDesktop}>The New York Times Best Sellers</h1>
-          <h3 className={styles.BookListHeaderTitleDesktop}>{title}</h3>
-          <h2 className={styles.BookListHeaderTitleMobile}>The New York Times Best Sellers</h2>
+          <h4 className={styles.BookListHeaderTitleDesktop}>Featured Books</h4>
+          <h2 className={styles.BookListHeaderTitleDesktop}>{title}</h2>
         </div>
-        <DatePicker
-          todayButton="Today"
-          minDate={new Date("2010-01-01")}
-          maxDate={today}
-          onChange={(pickedDate) => handleDateChange(pickedDate)}
-          customInput={calendarButton}
-          disabledKeyboardNavigation
-          nextYearButtonLabel
-          showYearDropdown
-        />
+        <div className={styles.CalendarButtonContainer}>
+          <DatePicker
+            todayButton="Today"
+            minDate={new Date("2010-01-01")}
+            maxDate={today}
+            onChange={(pickedDate) => handleDateChange(pickedDate)}
+            customInput={calendarButton}
+            disabledKeyboardNavigation
+            nextYearButtonLabel
+            showYearDropdown
+          />
+        </div>
       </div>
     </>
   );
