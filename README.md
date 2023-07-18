@@ -2,6 +2,8 @@
 
 Best-Sellers is a user-friendly web application built with Next.js 13, React and Typescript.
 
+![screenshot-best-sellers](https://github.com/freitasgouvea/best-sellers/assets/46804396/14e2306c-43ff-42db-983e-a63ecba9b787)
+
 ## Overview
 
 This application is designed to provide book enthusiasts with seamless access to The New York Times Best Sellers lists and expore books across all categories.
