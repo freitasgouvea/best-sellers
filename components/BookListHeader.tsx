@@ -7,13 +7,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { DateContext, NavigationContext } from "../app/providers";
 import { DateContextType, NavigationContextType } from "../types/context";
 import styles from "../styles/BookListHeader.module.css";
-import { weeklyBestSellersLists } from "../config/lists";
+import { bestSellersLists } from "../config/lists";
 
 export const BookListHeader = () => {
   const { navigation } = useContext(NavigationContext) as NavigationContextType;
   const { date, setDateContext } = useContext(DateContext) as DateContextType;
 
-  const title = weeklyBestSellersLists[navigation]?.name;
+  const title = bestSellersLists[navigation]?.name;
 
   const today = new Date();
 

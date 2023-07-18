@@ -1,6 +1,8 @@
+import { OverviewResponse } from "types/response";
+
 const apikey = process.env.NEXT_PUBLIC_NYT_API_KEY;
 
-export async function getData(date?: string) {
+export async function getData(date?: string): Promise<OverviewResponse | null> {
   let url = `https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=${apikey}`;
 
   if (date) {

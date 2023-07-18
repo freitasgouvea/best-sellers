@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { useContext } from "react";
 import { Navbar } from "../../components/Navbar";
 import { NavigationContextType } from "../../types/context";
-import { weeklyBestSellersLists } from "../../config/lists";
+import { bestSellersLists } from "../../config/lists";
 
 jest.mock("react", () => ({
   ...jest.requireActual("react"),
@@ -19,18 +19,18 @@ describe("Navbar", () => {
     } as NavigationContextType);
   });
 
-  test("renders the navbar with the correct weekly lists", () => {
+  test("renders the navbar with the correct lists", () => {
     render(<Navbar />);
     const navbar = screen.getByRole("navigation");
     const navbarLinks = screen.getAllByTestId("navbar-link");
 
     expect(navbar).toBeInTheDocument();
-    expect(navbarLinks).toHaveLength(Object.keys(weeklyBestSellersLists).length);
+    expect(navbarLinks).toHaveLength(Object.keys(bestSellersLists).length);
   });
 
   test("calls setNavigationContext when a navbar link is clicked", () => {
     render(<Navbar />);
-    const navbarLink = screen.getByText(weeklyBestSellersLists.CombinedPrintAndEBookFiction.name);
+    const navbarLink = screen.getByText(bestSellersLists.CombinedPrintAndEBookFiction.name);
 
     fireEvent.click(navbarLink);
 
@@ -43,7 +43,7 @@ describe("Navbar", () => {
       setNavigationContext: setNavigationContextMock,
     } as NavigationContextType);
     render(<Navbar />);
-    const activeNavbarLink = screen.getByText(weeklyBestSellersLists.CombinedPrintAndEBookFiction.name);
+    const activeNavbarLink = screen.getByText(bestSellersLists.CombinedPrintAndEBookFiction.name);
 
     expect(activeNavbarLink).toHaveClass("navbarLinkActive");
   });
@@ -54,7 +54,7 @@ describe("Navbar", () => {
       setNavigationContext: setNavigationContextMock,
     } as NavigationContextType);
     render(<Navbar />);
-    const inactiveNavbarLink = screen.getByText(weeklyBestSellersLists.CombinedPrintAndEBookFiction.name);
+    const inactiveNavbarLink = screen.getByText(bestSellersLists.CombinedPrintAndEBookFiction.name);
 
     expect(inactiveNavbarLink).toHaveClass("navbarLink");
   });

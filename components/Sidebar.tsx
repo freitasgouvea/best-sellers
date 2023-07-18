@@ -1,10 +1,11 @@
 "use client";
 
-import { useContext } from "react";
-import styles from "../styles/Sidebar.module.css";
-import { NavigationContext } from "../app/providers";
-import { NavigationContextType } from "../types/context";
-import { weeklyBestSellersLists } from "../config/lists";
+import { useContext } from 'react';
+import classnames from 'classnames';
+import styles from '../styles/Sidebar.module.css';
+import { NavigationContext } from '../app/providers';
+import { NavigationContextType } from '../types/context';
+import { bestSellersLists } from '../config/lists';
 
 export const Sidebar = () => {
   const { navigation, setNavigationContext } = useContext(NavigationContext) as NavigationContextType;
@@ -17,15 +18,36 @@ export const Sidebar = () => {
   return (
     <ul>
       <small>WEEKLY LISTS</small>
-      {Object.entries(weeklyBestSellersLists).map(([key, value]) => (
-        <li
-          key={key}
-          className={navigation === key ? styles.SidebarItemActive : styles.SidebarItem}
-          onClick={() => handleListClick(key)}
-        >
-          {value.name}
-        </li>
-      ))}
+      {Object.entries(bestSellersLists)
+        .filter(([, value]) => value.updated === 'WEEKLY')
+        .map(([key, value]) => (
+          <li
+            key={key}
+            className={classnames({
+              [styles.SidebarItem]: navigation !== key,
+              [styles.SidebarItemActive]: navigation === key,
+            })}
+            onClick={() => handleListClick(key)}
+          >
+            {value.name}
+          </li>
+        ))}
+      <br />
+      <small>MONTHLY LISTS</small>
+      {Object.entries(bestSellersLists)
+        .filter(([, value]) => value.updated === 'MONTHLY')
+        .map(([key, value]) => (
+          <li
+            key={key}
+            className={classnames({
+              [styles.SidebarItem]: navigation !== key,
+              [styles.SidebarItemActive]: navigation === key,
+            })}
+            onClick={() => handleListClick(key)}
+          >
+            {value.name}
+          </li>
+        ))}
     </ul>
   );
 };
