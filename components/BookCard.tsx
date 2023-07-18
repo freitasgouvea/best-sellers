@@ -15,13 +15,13 @@ export const BookCard = ({ book }: BookCardProps) => {
     book_image: BookImage,
     buy_links: BuyLinks,
     weeks_on_list: weeksOnList,
-    rank_last_week: rankLastWeek,
+    rank_last_week: rankLastWeek
   } = book;
 
   const rankVariation: number = rankLastWeek - rank;
 
   const infoIconType: string =
-    weeksOnList === 1 ? "new" : (rankVariation > 0 || rankLastWeek === 0) ? "up" : rankVariation < 0 ? "down" : "equal";
+    weeksOnList === 1 ? "new" : rankVariation > 0 || rankLastWeek === 0 ? "up" : rankVariation < 0 ? "down" : "equal";
 
   return (
     <div className={styles.card}>
@@ -36,19 +36,24 @@ export const BookCard = ({ book }: BookCardProps) => {
           </span>
         </div>
       </div>
-      <div className={styles.cardContent}>
-        <div className={styles.cardContentInfo}>
-          <p className={styles.title}>{title}</p>
-          <p className={styles.author}>{contributor}</p>
-          <p className={styles.description}>{description}</p>
-        </div>
-        <div className={styles.cardContentCover}>
-          <img className={styles.bookCover} src={BookImage} alt="Book Cover" />
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className={styles.flipCardFront}>
+            <img src={BookImage} width="300px" alt="Book Cover" />
+          </div>
+          <div className={styles.flipCardBack}>
+            <p className={styles.title}>{title}</p>
+            <p className={styles.author}>{contributor}</p>
+            <p className={styles.description}>{description}</p>
+            <small>Weeks On List: {weeksOnList} </small>
+            <br />
+            <small>Rank Last Week: {rankLastWeek} </small>
+          </div>
         </div>
       </div>
       <div className={styles.cardFooter}>
         <div className="dropdown">
-          <button className={styles.cardButton}>Buy ⌄</button>
+          <button className={styles.cardButton}>Buy ^</button>
           <div className="dropdown-content">
             {BuyLinks &&
               BuyLinks.map((item, key) => (

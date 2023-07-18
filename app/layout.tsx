@@ -5,7 +5,6 @@ import Providers from "./providers";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Sidebar } from "../components/Sidebar";
-import { Wishlist } from "../components/Wishlist";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,7 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="wrapper">
             <Sidebar />
             {children}
-            <Wishlist />
           </div>
           <Footer />
         </Providers>
