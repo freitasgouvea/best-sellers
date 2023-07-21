@@ -1,4 +1,4 @@
-.BookListHeader {
+.bookListHeader {
   display: grid;
   grid-template-columns: 4fr 1fr;
   margin-left: 0.5rem;
@@ -9,7 +9,7 @@
   }
 }
 
-.BookListHeaderTitleDesktop {
+.bookListHeaderTitleDesktop {
   margin-top: 0.1rem;
   font-weight: 500;
   @media (max-width: 900px) {
@@ -17,12 +17,12 @@
   }
 }
 
-.CalendarButtonContainer {
+.calendarButtonContainer {
   display: flex;
   justify-content: center;
 }
 
-.CalendarButton {
+.calendarButton {
   margin-top: 0.8rem;
   width: 200px;
   margin-left: auto;

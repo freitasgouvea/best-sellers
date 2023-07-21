@@ -36,7 +36,7 @@ describe("Sidebar", () => {
     render(<Sidebar />);
     const activeListItem = screen.getByText(bestSellersLists.CombinedPrintAndEBookFiction.name);
 
-    expect(activeListItem).toHaveClass("SidebarItemActive");
+    expect(activeListItem).toHaveClass("sidebar-item-active");
   });
 
   test("applies the inactive style to other weekly navigation items", () => {
@@ -47,7 +47,7 @@ describe("Sidebar", () => {
     render(<Sidebar />);
     const inactiveListItem = screen.getByText(bestSellersLists.CombinedPrintAndEBookFiction.name);
 
-    expect(inactiveListItem).toHaveClass("SidebarItem");
+    expect(inactiveListItem).toHaveClass("sidebar-item");
   });
 
   test("applies the inactive style to other monthly navigation items", () => {
@@ -58,7 +58,7 @@ describe("Sidebar", () => {
     render(<Sidebar />);
     const inactiveListItem = screen.getByText(bestSellersLists.MassMarket.name);
 
-    expect(inactiveListItem).toHaveClass("SidebarItem");
+    expect(inactiveListItem).toHaveClass("sidebar-item");
   });
 
   test("update navigation context and scrolls to the top when a weekly list item is clicked", () => {

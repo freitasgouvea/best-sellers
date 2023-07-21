@@ -5,8 +5,8 @@ describe("Footer", () => {
   test("renders a footer", () => {
     render(<Footer />);
 
-    const authorElement = screen.getByText(/Created by Flavio/i);
+    const link = screen.getByTestId("nyt-link")
 
-    expect(authorElement).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
   });
 });

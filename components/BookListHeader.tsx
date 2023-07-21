@@ -38,16 +38,16 @@ export const BookListHeader = () => {
     return date ? date : "Latest List";
   };
 
-  const calendarButton = <button className={styles.CalendarButton}>{renderSelectedDate()} ⌄</button>;
+  const calendarButton = <button className={styles.calendarButton}>{renderSelectedDate()} ⌄</button>;
 
   return (
     <>
-      <div className={styles.BookListHeader}>
+      <div className={styles.bookListHeader}>
         <div>
-          <h4 className={styles.BookListHeaderTitleDesktop}>Featured Books</h4>
-          <h2 className={styles.BookListHeaderTitleDesktop}>{title}</h2>
+          <h4 className={styles.bookListHeaderTitleDesktop}>Featured Books</h4>
+          <h2 className={styles.bookListHeaderTitleDesktop}>{title}</h2>
         </div>
-        <div className={styles.CalendarButtonContainer}>
+        <div className={styles.calendarButtonContainer}>
           <DatePicker
             todayButton="Today"
             minDate={new Date("2010-01-01")}

@@ -2,7 +2,6 @@
 
 import { useContext } from 'react';
 import classnames from 'classnames';
-import styles from '../styles/Sidebar.module.css';
 import { NavigationContext } from '../app/providers';
 import { NavigationContextType } from '../types/context';
 import { bestSellersLists } from '../config/lists';
@@ -24,8 +23,8 @@ export const Sidebar = () => {
           <li
             key={key}
             className={classnames({
-              [styles.SidebarItem]: navigation !== key,
-              [styles.SidebarItemActive]: navigation === key,
+              ["sidebar-item"]: navigation !== key,
+              ["sidebar-item-active"]: navigation === key,
             })}
             onClick={() => handleListClick(key)}
           >
@@ -40,8 +39,8 @@ export const Sidebar = () => {
           <li
             key={key}
             className={classnames({
-              [styles.SidebarItem]: navigation !== key,
-              [styles.SidebarItemActive]: navigation === key,
+              ["sidebar-item"]: navigation !== key,
+              ["sidebar-item-active"]: navigation === key,
             })}
             onClick={() => handleListClick(key)}
           >
