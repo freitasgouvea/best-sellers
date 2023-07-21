@@ -242,3 +242,18 @@ main {
   color: var(--font-color);
   transform: rotateY(180deg);
 }
+
+.sidebar-item,
+.sidebar-item-active {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.sidebar-item-active {
+  @media (min-width: 900px) {
+    border-right: 4px solid var(--border-color-gold);
+    font-weight: 600;
+  }
+}
