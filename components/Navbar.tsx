@@ -20,6 +20,7 @@ export const Navbar = () => {
           key={key}
           className={navigation === key ? styles.navbarLinkActive : styles.navbarLink}
           onClick={() => handleLinkClick(key)}
+          onKeyDown={() => handleLinkClick(key)}
           data-testid="navbar-link"
         >
           {value.name}

@@ -27,6 +27,7 @@ export const Sidebar = () => {
               ["sidebar-item-active"]: navigation === key,
             })}
             onClick={() => handleListClick(key)}
+            onKeyDown={() => handleLinkClick(key)}
           >
             {value.name}
           </li>
@@ -43,6 +44,7 @@ export const Sidebar = () => {
               ["sidebar-item-active"]: navigation === key,
             })}
             onClick={() => handleListClick(key)}
+            onKeyDown={() => handleLinkClick(key)}
           >
             {value.name}
           </li>
